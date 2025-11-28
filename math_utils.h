@@ -9,9 +9,11 @@ int subtract(int a, int b);
 int multiply(int a, int b);
 double divide(int a, int b);
 
-// Будущие операции (добавит Bob)
-// int modulo(int a, int b);
-// double power(double base, double exponent);
+// Операции Bob
+int modulo(int a, int b);
+double power(double base, double exponent);
+
+// Будущие операции
 // double square_root(double x);
 // double sine(double x);
 // double cosine(double x);

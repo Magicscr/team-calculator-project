@@ -5,14 +5,12 @@ class Calculator:
     def __init__(self):
         self.memory = 0.0
     
-    # Базовые операции (добавят разработчики)
     def add(self, a, b):
         return a + b
     
     def subtract(self, a, b):
         return a - b
 
-    # Операции Alice - умножение и деление
     def multiply(self, a, b):
         return a * b
     
@@ -21,10 +19,27 @@ class Calculator:
             raise ValueError("Division by zero!")
         return a / b
 
+    def power(self, base, exponent):
+        return base ** exponent
+    
+    def modulo(self, a, b):
+        if b == 0:
+            raise ValueError("Modulo by zero!")
+        return a % b
+
+    # Тригонометрия от Alice
+    def sine(self, x):
+        import math
+        return math.sin(x)
+    
+    def cosine(self, x):
+        import math
+        return math.cos(x)
+
 if __name__ == "__main__":
     calc = Calculator()
     print("=== Калькулятор на Python ===")
-    print(f"5 + 3 = {calc.add(5, 3)}")
-    print(f"5 - 3 = {calc.subtract(5, 3)}")
-    print(f"5 * 3 = {calc.multiply(5, 3)}")
-    print(f"6 / 3 = {calc.divide(6, 3)}")
+    print("Доступно: +, -, *, /, %, **, sin, cos")
+    # Alice изменила этот блок
+    result = calc.add(10, 5)
+    print(f"Пример: 10 + 5 = {result}")

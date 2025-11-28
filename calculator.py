@@ -27,7 +27,6 @@ class Calculator:
             raise ValueError("Modulo by zero!")
         return a % b
 
-    # Тригонометрия от Alice
     def sine(self, x):
         import math
         return math.sin(x)
@@ -36,10 +35,19 @@ class Calculator:
         import math
         return math.cos(x)
 
+    def memory_store(self, value):
+        self.memory = value
+    
+    def memory_recall(self):
+        return self.memory
+
 if __name__ == "__main__":
     calc = Calculator()
-    print("=== Калькулятор на Python ===")
-    print("Доступно: +, -, *, /, %, **, sin, cos")
-    # Alice изменила этот блок
+    # Alice меняет ЭТУ строку
+    print("=== Калькулятор Python от Alice ===")
+    print("Доступно: +, -, *, /, %, **, sin, cos, память")
     result = calc.add(10, 5)
+    calc.memory_store(100)
     print(f"Пример: 10 + 5 = {result}")
+    print(f"Память: {calc.memory_recall()}")
+    print(f"sin(90) = {calc.sine(1.57):.2f}")

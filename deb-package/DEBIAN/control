@@ -1,0 +1,8 @@
+﻿Package: py-calculator
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Polina Zimina <polina@university.com>
+Description: Python Calculator - Team Project
+ Командный проект калькулятора на Python с 12 математическими операциями

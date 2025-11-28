@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 echo ================================================
 echo CI/CD SCRIPT FOR PYTHON CALCULATOR TEAM
 echo Version: %2
@@ -13,12 +13,12 @@ echo Current state downloaded
 
 REM 2. Project build and unittest build
 echo 2. PROJECT BUILD...
-python --version
+py --version
 echo Project ready for testing
 
 REM 3. Unittest execution
 echo 3. EXECUTING UNITTESTS...
-python -m unittest test_calculator.py -v
+py -m unittest test_calculator.py -v
 
 if %errorlevel% equ 0 (
     echo TESTS PASSED SUCCESSFULLY

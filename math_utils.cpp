@@ -21,7 +21,6 @@ double divide(int a, int b) {
     return static_cast<double>(a) / b;
 }
 
-// Функции Bob - остаток от деления и степень
 int modulo(int a, int b) {
     if (b == 0) {
         throw std::runtime_error("Modulo by zero!");
@@ -31,4 +30,20 @@ int modulo(int a, int b) {
 
 double power(double base, double exponent) {
     return std::pow(base, exponent);
+}
+
+// Тригонометрия от Alice
+double square_root(double x) {
+    if (x < 0) {
+        throw std::runtime_error("Square root of negative number!");
+    }
+    return std::sqrt(x);
+}
+
+double sine(double x) {
+    return std::sin(x);
+}
+
+double cosine(double x) {
+    return std::cos(x);
 }

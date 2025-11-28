@@ -1,0 +1,4 @@
+﻿#!/bin/bash
+echo "Удаление Python Calculator Team..."
+rm -f /usr/local/bin/py-calculator
+echo "Приложение удалено"

@@ -72,8 +72,10 @@ class TestCalculator(unittest.TestCase):
     def test_trigonometry(self):
         self.assertEqual(self.calc.sine(0), 0)
         self.assertEqual(self.calc.cosine(0), 1)
-        self.assertEqual(self.calc.sine(math.pi/2), 1)
-        self.assertEqual(self.calc.sine(math.pi), 0)
+        # Используем almostEqual для сравнения с плавающей точкой
+        self.assertAlmostEqual(self.calc.sine(math.pi/2), 1, places=10)
+        self.assertAlmostEqual(self.calc.sine(math.pi), 0, places=10)
+        self.assertAlmostEqual(self.calc.cosine(math.pi), -1, places=10)
     
     def test_floor_ceil(self):
         self.assertEqual(self.calc.floor(3.7), 3)
